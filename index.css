@@ -1,0 +1,573 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Font Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #3B2A2B; /* Dark Brown for text */
+    background-color: #ffffff; /* White background */
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #563d2d; /* Dark coffee brown */
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #3E2723; 
+    position: fixed; /* Keep the navbar fixed at the top */
+    top: 0; /* Align it to the top of the viewport */
+    width: 100%; /* Ensure it takes the full width */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+/* Transparent Navbar */
+.navbar.transparent {
+    background-color: transparent; /* Transparent background */
+}
+/* Opaque Navbar */
+.navbar.opaque {
+    background-color: #3E2723; /* Set your desired opaque color */
+}
+#mainNavbar .navbar-toggler {
+    background-color: #FFCC80; 
+    position: absolute; /* Positioning it absolutely within the navbar */
+    top: 15px; /* Adjust this value to position it vertically */
+    left: 15px; /* Adjust this value to position it horizontally */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    border: none;
+}
+.navbar-brand {
+    color: #FFCC80; 
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: white; 
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #FFCC80; 
+}
+
+.nav-icons ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* Space between icons */
+}
+
+.nav-icons li {
+    display: inline-block;
+}
+
+.nav-icons a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+}
+
+.nav-icons a:hover {
+    color: #FFCC80; /* Hover effect for the text */
+}
+
+#cartModal .modal-dialog {
+    max-width: 400px; 
+    margin: 1.75rem auto;
+}
+
+#cartModal .modal-title {
+    color: #3E2723; 
+}
+
+#cartModal .modal-content {
+    background-color: #F5F5F5; 
+    border: 1px solid #FFCC80;
+}
+
+#cartModal .btn-primary {
+    background-color: #3E2723;
+    border: none;
+}
+
+/* Modal Popup */
+/* .modal {
+    display: flex;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    animation: modal-animation 0.5s;
+    position: relative;
+}
+
+@keyframes modal-animation {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+} */
+
+/* Hero Section */
+.hero {
+    position: relative;
+    overflow: hidden; /* Prevent overflow of video */
+    height: 100vh; /* Full height */
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    text-align: center; /* Center text */
+}
+
+.video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1; /* Behind the content */
+    opacity: 0.7; /* Adjust for transparency */
+    transform: translate(-50%, -50%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Above the video */
+    color: white; /* Ensure text is visible */
+}
+
+.hero-content h1 {
+    font-size: 4rem; /* Adjust this value for desired size */
+    font-weight: bold; /* Ensure the text is bold */
+}
+
+.hero-content p {
+    font-size: 1.5rem; /* Adjust this value for desired size */
+    font-weight: 400; /* Normal weight for the paragraph */
+}
+
+.hero-content a.btn {
+    background-color: #8B4513; /* Brown color for the button */
+    color: white; /* White text color */
+    padding: 12px 30px; /* Increase padding for a bigger button */
+    border-radius: 25px; /* Rounded corners */
+    font-size: 1.2rem; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+}
+
+.hero-content a.btn:hover {
+    background-color: #A0522D; /* Lighter brown on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Coffee Selection Section */
+#coffee-selection .section-title {
+    color: #8B4513; /* Change to your desired color */
+    font-size: 40px; /* Change to your desired size */
+}
+
+.section-title {
+    color: #4E3B31; /* Dark Chocolate Brown */
+}
+
+.card {
+    background-color: #ffffff; /* White background for cards */
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card-title {
+    color: #4E3B31; /* Dark Chocolate Brown */
+}
+
+/* Position the hover description and initially hide it */
+.hover-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 69%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 5px;
+}
+
+/* Show the description on hover */
+.card:hover .hover-description {
+    opacity: 1;
+}
+
+
+/* Equipment Section */
+#equipment .section-title {
+    color: #8B4513; /* Change to your desired color */
+    font-size: 40px; /* Change to your desired size */
+}
+#equipment .card {
+    background-color: #ffffff; /* White background for equipment cards */
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 15px;
+}
+
+.img-container:hover .img-overlay {
+    opacity: 1;
+}
+
+
+/* Events Section */
+#events .section-title {
+    color: #8B4513; /* Change to your desired color */
+    font-size: 40px; /* Change to your desired size */
+}
+
+#events .event-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#events .event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#events .card-img-top {
+    height: 300px;
+    object-fit: cover;
+}
+
+#events .card-title {
+    font-size: 1.5em;
+    color: #6d4c41; /* Coffee-brown color */
+}
+
+#events .btn-outline-dark {
+    color: #4e342e;
+    border-color: #4e342e;
+}
+
+#events .btn-outline-dark:hover {
+    background-color: #4e342e;
+    color: #ffffff;
+}
+/* Event card overlay */
+.event-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.event-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 59%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-card:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-text {
+    color: #ffffff;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 15px;
+}
+
+.modal fade {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Cart */
+#cart .section-title {
+    color: #8B4513; 
+    font-size: 40px; 
+}
+
+/* Footer */
+footer {
+    background-color: #4E3B31; /* Dark Chocolate Brown */
+}
+footer p {
+    color: #D1B19C; /* Light Beige */
+}
+.social-icons a {
+    color: #D1B19C; /* Light Beige */
+}
+.social-icons a:hover {
+    color: #7C4A40; /* Warm Cocoa Brown */
+}
+
+/* Testimonials Section */
+#testimonials .section-title {
+    color: #8B4513; 
+    font-size: 40px; 
+}
+
+#testimonials {
+    background-color: #f8f9fa; /* Light background */
+    padding: 60px 0; /* Spacing around section */
+}
+
+.testimonial-card {
+    background-color: #fff; /* White background for testimonials */
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s; /* Smooth hover effect */
+    padding: 20px;
+    margin: 15px; /* Spacing between cards */
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.testimonial-text {
+    font-style: italic; /* Italic text for testimonials */
+    color: #555; /* Dark gray color for text */
+    margin-bottom: 10px; /* Space between text and author */
+}
+
+.testimonial-author {
+    font-weight: bold; /* Bold author name */
+}
+
+/* Special Offers Section */
+#special-offers .section-title {
+    color: #8B4513; /* Change to your desired color */
+    font-size: 40px; /* Change to your desired size */
+}
+
+.special-offers {
+    background-color: #fff8f0; /* Light cream background */
+}
+
+.offer-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 30px;
+}
+
+.offer-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4d3a32; /* Medium coffee brown */
+}
+
+.offer-card h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #563d2d;
+    margin-top: 15px;
+}
+
+.offer-card p {
+    font-size: 16px;
+    color: #777;
+}
+
+.offer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline-light {
+    padding: 10px 25px;
+    border-radius: 25px;
+    background-color: transparent;
+    color: #563d2d;
+    border: 2px solid #563d2d;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-light:hover {
+    background-color: #563d2d;
+    color: white;
+    border-color: #563d2d;
+}
+
+/* Contact Us Section */
+#contact-us .section-title {
+    color: #8B4513; /* Change to your desired color */
+    font-size: 40px; /* Change to your desired size */
+}
+.contact-us {
+    background-color: white;
+}
+
+form input, form textarea {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+form button {
+    padding: 10px 30px;
+    border-radius: 25px;
+    background-color: #563d2d;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #402b21; /* Darker brown */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .offer-card {
+        margin-bottom: 20px;
+    }
+}
+
+.offer-card button {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.nav-icons {
+    display: flex; /* Ensure nav-icons container is flex */
+    align-items: center; /* Center align items vertically */
+}
+
+.nav-icons ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-icons li {
+    margin-left: 20px;
+}
+
+.nav-icons a {
+    text-decoration: none;
+    color: #FFCC80;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.nav-icons a:hover {
+    color: black;
+}
+
+.nav-icons i {
+    margin-right: 8px;
+    font-size: 18px;
+    color: #FFCC80;
+}
+
+.cart-count {
+    background-color: #900d0d;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+
