@@ -1,0 +1,131 @@
+/* Custom Font Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #3B2A2B; /* Dark Brown for text */
+    background-color: #ffffff; /* White background */
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #563d2d; /* Dark coffee brown */
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #3E2723; 
+    position: fixed; /* Keep the navbar fixed at the top */
+    top: 0; /* Align it to the top of the viewport */
+    width: 100%; /* Ensure it takes the full width */
+    z-index: 1030; /* Ensure it stays above other content */
+}
+/* Transparent Navbar */
+.navbar.transparent {
+    background-color: transparent; /* Transparent background */
+}
+/* Opaque Navbar */
+.navbar.opaque {
+    background-color: #3E2723; /* Set your desired opaque color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+#mainNavbar .navbar-toggler {
+    background-color: #FFCC80; 
+    position: absolute; /* Positioning it absolutely within the navbar */
+    top: 15px; /* Adjust this value to position it vertically */
+    left: 15px; /* Adjust this value to position it horizontally */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    border: none;
+}
+.navbar-brand {
+    color: #FFCC80; 
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: white; 
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #FFCC80; 
+}
+
+.nav-icons ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* Space between icons */
+}
+
+.nav-icons li {
+    display: inline-block;
+}
+
+.nav-icons a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+}
+
+.nav-icons a:hover {
+    color: #FFCC80; /* Hover effect for the text */
+}
+
+#cartModal .modal-dialog {
+    max-width: 400px; 
+    margin: 1.75rem auto;
+}
+
+#cartModal .modal-title {
+    color: #3E2723; 
+}
+
+#cartModal .modal-content {
+    background-color: #F5F5F5; 
+    border: 1px solid #FFCC80;
+}
+
+#cartModal .btn-primary {
+    background-color: #3E2723;
+    border: none;
+}
+
+/* Equipment Section */
+#equipment .section-title {
+    color: #8B4513; 
+    font-size: 40px; 
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+#equipment .card {
+    background-color: #ffffff; /* White background for equipment cards */
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 15px;
+}
+
+.img-container:hover .img-overlay {
+    opacity: 1;
+}
