@@ -1,0 +1,319 @@
+/* General Body Styling */
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #fbf8f5; /* Soft coffee cream */
+    color: #3E2723; /* Dark coffee color for text */
+    font-size: 18px; 
+    line-height: 1.6; 
+    margin: 0;
+    /* padding: 80px; */
+    padding-top: 100px;
+}
+
+@media (max-width: 768px) {
+    .cart-item {
+        width: 100%;
+    }
+    
+    .checkout-btn {
+        font-size: 16px;
+    }
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #3E2723; 
+    position: fixed; /* Keep the navbar fixed at the top */
+    top: 0; /* Align it to the top of the viewport */
+    width: 100%; /* Ensure it takes the full width */
+    z-index: 1030; /* Ensure it stays above other content */
+}
+/* Transparent Navbar */
+.navbar.transparent {
+    background-color: transparent; /* Transparent background */
+}
+/* Opaque Navbar */
+.navbar.opaque {
+    background-color: #3E2723; /* Set your desired opaque color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+#mainNavbar .navbar-toggler {
+    background-color: #FFCC80; 
+    position: absolute; /* Positioning it absolutely within the navbar */
+    top: 15px; /* Adjust this value to position it vertically */
+    left: 15px; /* Adjust this value to position it horizontally */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    border: none;
+}
+.navbar-brand {
+    color: #FFCC80; 
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: white; 
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #FFCC80; 
+}
+
+.nav-icons ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* Space between icons */
+}
+
+.nav-icons li {
+    display: inline-block;
+}
+
+.nav-icons a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+}
+
+.nav-icons a:hover {
+    color: #FFCC80; /* Hover effect for the text */
+}
+
+#cartModal .modal-dialog {
+    max-width: 400px; 
+    margin: 1.75rem auto;
+}
+
+#cartModal .modal-title {
+    color: #3E2723; 
+}
+
+#cartModal .modal-content {
+    background-color: #F5F5F5; 
+    border: 1px solid #FFCC80;
+}
+
+#cartModal .btn-primary {
+    background-color: #3E2723;
+    border: none;
+}
+
+/* Main Container */
+.container {
+    margin-top: 6px;
+    padding: 0px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Header Styling */
+h1 {
+    color: #945426; /* Rich coffee brown */
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 60px; /* Large header */
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+/* Cart Item Styling */
+.cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    gap: 20px;
+}
+
+.cart-item {
+    width: 48%; /* 2 items per row */
+    border: 2px solid #BCAAA4; /* Light coffee-inspired border */
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #FFF8E1; /* Pale coffee cream background */
+    margin-bottom: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Drop shadow */
+    transition: transform 0.3s ease-in-out;
+}
+
+.cart-item:hover {
+    transform: scale(1.05); /* Hover effect */
+}
+
+.item-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 2px solid #8D6E63; /* Darker coffee border for images */
+}
+
+.item-details {
+    font-size: 1.1rem;
+    color: #5D4037; /* Medium brown for text */
+}
+
+.item-quantity input {
+    width: 60px;
+    border-radius: 8px;
+    padding: 8px;
+    border: 1px solid #8D6E63;
+    background-color: #FFF3E0; /* Light coffee cream */
+    font-size: 16px;
+}
+
+.remove-btn {
+    background-color: #8D6E63;
+    color: white;
+    border: 2px solid #6D4C41; /* Dark brown border */
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 30px; /* Round button edges */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.remove-btn:hover {
+    background-color: #6D4C41;
+    border-color: #3E2723;
+    transform: translateY(-3px); /* Slight movement on hover */
+}
+
+/* Cart Summary */
+.cart-summary {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    max-width: 500px;
+    padding: 30px;
+    background-color: #FFF3E0; /* Soft coffee cream */
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border: 3px solid #6D4C41;
+}
+
+.cart-summary h2 {
+    margin-top: 0;
+    color: #6D4C41;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.checkout-btn {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #6D4C41;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    border: 2px solid #4E342E;
+    border-radius: 50px; /* Round edges */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #4E342E;
+    border-color: #3E2723;
+    transform: translateY(-3px); /* Slight hover effect */
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+    background-color: #FAFAFA;
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.modal-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #6D4C41;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #757575;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #3E2723;
+}
+
+/* Form Styling */
+.form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #6D4C41;
+    font-size: 1.2rem; /* Slightly larger label text */
+}
+
+.form-control {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #6D4C41;
+    border-radius: 12px; /* Rounded edges */
+    margin-top: 5px;
+    font-size: 16px;
+    background-color: #FFF3E0;
+}
+
+.form-control:focus {
+    border-color: #8D6E63;
+    box-shadow: 0 0 5px rgba(141, 110, 99, 0.5);
+    outline: none;
+}
+
+.btn-lg {
+    font-size: 20px;
+    padding: 16px;
+    background-color: #8D6E63;
+    color: white;
+    border: 2px solid #6D4C41;
+    border-radius: 50px; /* Round button edges */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-lg:hover {
+    background-color: #6D4C41;
+    border-color: #3E2723;
+    transform: translateY(-3px); /* Slight hover effect */
+}
+
+.text-muted {
+    font-size: 16px;
+    color: #A1887F;
+}
